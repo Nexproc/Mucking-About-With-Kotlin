@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package proto;
+
+option java_package = "proto";
+option java_outer_classname = "InfoProto";
+
+message Info {
+    string name = 1;
+
+    int64 id = 2;
+
+    repeated Info info = 3;
+}
