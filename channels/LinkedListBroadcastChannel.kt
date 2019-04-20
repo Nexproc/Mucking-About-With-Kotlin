@@ -25,7 +25,7 @@ class LinkedListBroadcastChannel<E> private constructor (
 ) : BroadcastChannel<E> by broadcastChannel, SendChannel<E> by bufferChannel {
     constructor(coroutineContext: CoroutineContext = Dispatchers.Default) : this(
         coroutineContext = coroutineContext,
-        broadcastChannel = BroadcastChannel(10),
+        broadcastChannel = BroadcastChannel(1),
         bufferChannel = Channel(Channel.UNLIMITED)
     )
 
